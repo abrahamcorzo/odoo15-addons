@@ -44,9 +44,14 @@
   </record>
 
   <menuitem
+  id="root_menu_book"
+  name="Books"
+  web_icon="library.book_icon.png"/>
+
+  <menuitem
     id="menu_book"
     name="Books"
     action="library.action_view_book"
-    parent=""
+    parent="root_menu_book"
   />
 </odoo>

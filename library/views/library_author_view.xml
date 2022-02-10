@@ -33,11 +33,17 @@
     <field name="view_mode">tree,form</field>
   </record>
 
+
+<menuitem
+  id="root_menu_author"
+  name="Authors"
+  web_icon="library,author_icon.png"/>
+
   <menuitem
     id="menu_author"
     name="Authors"
     action="library.action_view_author"
-    parent=""
+    parent="root_menu_author"
   />
 </odoo>
 
