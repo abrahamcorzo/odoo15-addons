@@ -7,4 +7,4 @@ class Author(models.Model):
       _name = 'library.author'
 
       name = fields.Char()
-      #book_id = fields.One2many("library.book", string="Book")
+      book_id = fields.One2many("library.book", "author_id", string="Book")
