@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Libreria",
+    'name': "Library",
 
     'summary': """
         Contiene información sobre un catálogo de libros con sus autores correspondientes.""",
@@ -16,12 +16,13 @@
     'category': 'Uncategorized',
     'version': '0.1',
 
-    # any module necessary for this one to work correctly
-    'depends': ['base'],
+    # 'depends': ['base'],
 
     # always loaded
     'data': [
-      
+        'views\library_author_view.xml',
+        'views\library_book_view.xml',
+        'security.xml'
     ]
 
 }
