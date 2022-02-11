@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Library",
+    'name': "Book catalog",
 
     'summary': """
         Contiene información sobre un catálogo de libros con sus autores correspondientes.""",
@@ -20,8 +20,8 @@
 
     # always loaded
     'data': [
-        'views\library_author_view.xml',
-        'views\library_book_view.xml',
+        'views\\book_catalog_author_view.xml',
+        'views\\book_catalog_book_view.xml',
         'security.xml'
     ]
 

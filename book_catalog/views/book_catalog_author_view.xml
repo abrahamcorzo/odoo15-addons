@@ -3,7 +3,7 @@
 
   <record id="view_tree_author" model="ir.ui.view">
     <field name="name">view.tree.author</field>
-    <field name="model">library.author</field>
+    <field name="model">book_catalog.author</field>
     <field name="arch" type="xml">
       <tree>
         <field name="name" />
@@ -14,7 +14,7 @@
 
   <record id="view_form_author" model="ir.ui.view">
     <field name="name">view.form.author</field>
-    <field name="model">library.author</field>
+    <field name="model">book_catalog.author</field>
     <field name="arch" type="xml">
       <form>  
         <sheet>
@@ -29,7 +29,7 @@
 
   <record id="action_view_author" model="ir.actions.act_window">
     <field name="name">Authors</field>
-    <field name="res_model">library.author</field>
+    <field name="res_model">book_catalog.author</field>
     <field name="view_mode">tree,form</field>
   </record>
 
@@ -37,12 +37,12 @@
 <menuitem
   id="root_menu_author"
   name="Authors"
-  web_icon="library,author_icon.png"/>
+  web_icon="book_catalog,author_icon.png"/>
 
   <menuitem
     id="menu_author"
     name="Authors"
-    action="library.action_view_author"
+    action="book_catalog.action_view_author"
     parent="root_menu_author"
   />
 </odoo>
