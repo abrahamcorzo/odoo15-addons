@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_book">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <h2 class="text-center">Book report</h2>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Publication date</th>
+                                        <th>Stock</th>
+                                        <th>Status</th>
+                                        <th>Collection</th>
+                                        <th>Collection name</th>
+                                    </tr>  
+                                </thead>
+                                <thbody>
+                                    <tr foreach="o.title" t-as="book_catalog_book">
+                                        <td>
+                                            <span t-field="book_catalog_book.title"/>
+                                        </td>
+                                    </tr> 
+                                </thbody>
+
+                            </table>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

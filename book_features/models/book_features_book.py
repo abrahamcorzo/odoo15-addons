@@ -14,7 +14,7 @@ class Book(models.Model):
             self.status = 'available'
     
     @api.onchange('collection')
-    def _set_collection_name(self):
+    def _erase_collection_name(self):
         if self.collection == 'no':
             self.collection_name = None
     

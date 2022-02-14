@@ -22,6 +22,8 @@
     'data': [
         'views\\book_catalog_author_view.xml',
         'views\\book_catalog_book_view.xml',
+        'report\\book_report_view.xml',
+        'report\\book_report.xml',
         'security.xml'
     ]
 
