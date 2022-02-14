@@ -13,8 +13,8 @@ class Book(models.Model):
         else: 
             self.status = 'available'
     
-    @api.depends('collection')
+    @api.onchange('collection')
     def _set_collection_name(self):
         if self.collection == 'no':
-            self.collection_name = 'xxx'
-        
+            self.collection_name = None
+    

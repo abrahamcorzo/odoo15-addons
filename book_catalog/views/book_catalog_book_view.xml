@@ -25,11 +25,20 @@
         <sheet>
           <group>
             <field name="title" string="Title" />
+            <field name="cover_picture" 
+                  string="Cover picture"
+                  widget="image"
+                  class="oe_avatar"
+            />
             <field name="publication_date" string="Publication date" /> 
             <field name="stock" string="Stock" /> 
             <field name="status" string="Status" /> 
             <field name="collection" string="Collection" /> 
-            <field name="collection_name" string="Collection name" /> 
+            <field 
+              name="collection_name" 
+              string="Collection name" 
+              attrs="{'invisible': [('collection', '=', 'no')]}" 
+            /> 
             <field name="author_id" string="Author" /> 
           </group>
         </sheet>
@@ -37,16 +46,62 @@
     </field>
   </record>
 
+  <record id="view_kanban_book" model="ir.ui.view">
+    <field name="name">view.kanban.book</field>
+    <field name="model">book_catalog.book</field>
+    <field name="arch" type="xml">
+      <kanban>
+        <field name="id" />
+        <field name="title" />
+        <field name="cover_picture" />
+        <field name="publication_date" />
+        <field name="stock" />
+        <field name="status" />
+        <field name="collection" />
+        <field name="collection_name" />
+        <field name="author_id" />
+        <templates>
+          <t t-name="kanban-box">
+            <div class="oe_kanban_global_click o_kanban_record_has_image_fill">
+              <div class="o_kanban_image d-none d-md-block">
+                <img 
+                    t-att-src="kanban_image('book_catalog.book', 'cover_picture', record.id.raw_value)" 
+                    alt="Cover Picture"
+                />
+              </div>
+              <div class="oe_kanban_details d-flex flex-column">
+                <div class="o_kanban_record_headings">
+                  <strong class="o_kanbak_record_title oe_partner_heading">
+                    <field name="title" />
+                  </strong>
+                </div>
+                <ul>
+                  <li>Publication date: <field name="publication_date" /> </li>
+                  <li>Stock: <field name="stock" /> </li>
+                  <li>Status: <field name="status" /> </li>
+                  <li>Collection: <field name="collection" /> </li>
+                  <li>Collection name: <field name="collection_name" /> </li>
+                  <li>Author: <field name="author_id" /> </li>
+                </ul>
+              </div>
+            </div>
+          </t>
+        </templates>
+      </kanban>
+    </field>
+  </record>
+
   <record id="action_view_book" model="ir.actions.act_window">
     <field name="name">Books</field>
     <field name="res_model">book_catalog.book</field>
-    <field name="view_mode">tree,form</field>
+    <field name="view_mode">tree,form,kanban</field>
   </record>
 
   <menuitem
-  id="root_menu_book"
-  name="Books"
-  web_icon="book_catalog,book_icon.png"/>
+    id="root_menu_book"
+    name="Books"
+    web_icon="book_catalog,book_icon.png"
+  />
 
   <menuitem
     id="menu_book"

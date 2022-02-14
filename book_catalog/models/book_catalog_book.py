@@ -7,6 +7,7 @@ class Book(models.Model):
       _name = 'book_catalog.book'
 
       title = fields.Char()
+      cover_picture = fields.Binary(string="Cover Picture")
       publication_date = fields.Date()
       stock = fields.Integer()
       status = fields.Selection(
@@ -24,8 +25,6 @@ class Book(models.Model):
             ]
       )
       collection_name = fields.Char(
-            store = True,
-            compute = '_set_collection_name'
       )
       author_id = fields.Many2one("book_catalog.author", string="Author")
 
