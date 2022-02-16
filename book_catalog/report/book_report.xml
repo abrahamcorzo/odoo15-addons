@@ -2,7 +2,7 @@
 <odoo>
     <data>
         <record id="report_book_catalog_book" model="ir.actions.report">
-            <field name="name">Books report</field>
+            <field name="name">Book report</field>
             <field name="model">book_catalog.book</field>
             <field name="report_type">qweb-pdf</field>
             <field name="report_name">book_catalog.report_book</field>
@@ -12,4 +12,3 @@
         </record>
     </data>
 </odoo>
- 

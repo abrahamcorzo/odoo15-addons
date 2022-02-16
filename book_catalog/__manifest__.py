@@ -24,6 +24,8 @@
         'views\\book_catalog_book_view.xml',
         'report\\book_report_view.xml',
         'report\\book_report.xml',
+        'report\\author_report_view.xml',
+        'report\\author_report.xml',
         'security.xml'
     ]
 
