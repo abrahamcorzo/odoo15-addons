@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_bookshelf_bookshelf,bookshelf.bookshelf,model_bookshelf_bookshelf,base.group_user,1,1,1,1
+access_book_catalog_book,book_catalog.book,model_book_catalog_book,base.group_user,1,1,1,1
+access_book_catalog_author,book_catalog.author,model_book_catalog_author,base.group_user,1,1,1,1
+access_book_catalog_author_wizard,book_catalog.author_wizard,model_book_catalog_author_wizard,base.group_user,1,1,1,1

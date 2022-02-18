@@ -22,11 +22,11 @@
     'data': [
         'views\\book_catalog_author_view.xml',
         'views\\book_catalog_book_view.xml',
-        'report\\book_report_view.xml',
-        'report\\book_report.xml',
-        'report\\author_report_view.xml',
-        'report\\author_report.xml',
-        'security.xml'
+        'report\\book_catalog_author_report_view.xml',
+        'report\\book_catalog_author_report.xml',
+        'report\\book_catalog_author_external_layout.xml',
+        'security\\ir.model.access.csv',
+        'wizard\\book_catalog_author_wizard_view.xml'
     ]
 
 }

@@ -100,13 +100,8 @@
   <menuitem
     id="root_menu_book"
     name="Books"
+    action="action_view_book"
     web_icon="book_catalog,book_icon.png"
   />
 
-  <menuitem
-    id="menu_book"
-    name="Books"
-    action="book_catalog.action_view_book"
-    parent="root_menu_book"
-  />
 </odoo>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="author_wizard_view" model="ir.ui.view">
+    <field name="name">wizard.view.author</field>
+    <field name="model">book_catalog.author_wizard</field>
+    <field name="arch" type="xml">
+      <form>
+        <group>
+          <group>
+            <field name="author_id" />
+          </group>
+        </group>
+        <footer>
+          <button name="print_report" 
+                  string="Search author" 
+                  type="object"
+                  class="btn btn-primary" 
+          />
+          <button string="Cancel" 
+                  special="cancel" 
+                  class="btn btn-secondary"
+          />
+        </footer>
+      </form>
+    </field>
+  </record>
+
+  <record id="author_wizard_action" model="ir.actions.act_window">
+    <field name="name">Author wizard</field>
+    <field name="res_model">book_catalog.author_wizard</field>
+    <field name="view_mode">form</field>
+    <field name="view_id" ref="author_wizard_view" />
+    <field name="target">new</field>
+  </record>
+
+  <menuitem
+    id="author_wizard_menu"
+    name="Author wizard"
+    action="author_wizard_action"
+    parent="book_catalog.root_menu_author"
+  />
+
+
+
+</odoo>
