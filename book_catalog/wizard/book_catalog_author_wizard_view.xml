@@ -7,7 +7,7 @@
       <form>
         <group>
           <group>
-            <field name="author_id" />
+            <field name="author_ids" />
           </group>
         </group>
         <footer>
@@ -39,7 +39,5 @@
     action="author_wizard_action"
     parent="book_catalog.root_menu_author"
   />
-
-
 
 </odoo>

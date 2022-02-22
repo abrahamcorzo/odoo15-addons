@@ -20,13 +20,14 @@
 
     # always loaded
     'data': [
+        'security\\ir.model.access.csv',
         'views\\book_catalog_author_view.xml',
         'views\\book_catalog_book_view.xml',
         'report\\book_catalog_author_report_view.xml',
         'report\\book_catalog_author_report.xml',
-        'report\\book_catalog_author_external_layout.xml',
-        'security\\ir.model.access.csv',
-        'wizard\\book_catalog_author_wizard_view.xml'
+        'wizard\\book_catalog_author_wizard_view.xml',
+        'report\\book_catalog_author_external_layout_view.xml',
+        'report\\book_catalog_author_external_layout.xml'
     ]
 
 }
